@@ -3,14 +3,11 @@ const Schema = mongoose.Schema
 
 const Order = new Schema(
     {
-        id:Number,
-        sportType:String,
-        productName:String,
-        company:String,
-        price:String,
-        Quantity:Number,
-        teamId:Number,
-        imgLink:String
+        orderNumber: { type: Number, required: true },
+        orderDate: { type: Date, required: true },
+        userDetails: { type: Object, required: true },
+        sum: { type: String, required: true },
+        itemsNumber: { type: Number, required: true }
     }
 )
 module.exports = mongoose.model("orders", Order)

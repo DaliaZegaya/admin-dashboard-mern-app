@@ -3,16 +3,15 @@ const Schema = mongoose.Schema
 
 const Product = new Schema(
     {
-        id:Number,
-        garmentType:String,
-        gender:String,
-        company:String,
-        model:String,
-        price:String,
-        Quantity:Number,
-        isShort:Boolean,
-        isDryfit:Boolean,
-        imgLink:String
+        category: {type:String, required:true},
+        gender: {type:String, required:true},
+        brand: {type:String, required:true},
+        model: {type:String, required:true},
+        size: {type:String || Number, required:true},
+        price: {type:String, required:true},
+        quantity: {type:Number, required:true},
+        isOnSale: {type:Boolean, required:true},
+        imgLink: {type:String, required:false}
     }
 )
 module.exports = mongoose.model("products", Product)

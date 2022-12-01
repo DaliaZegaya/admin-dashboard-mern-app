@@ -3,12 +3,17 @@ const Schema = mongoose.Schema
 
 const User = new Schema(
     {
-        id:Number,
-        firstName:String,
-        lastName:String,
-        email:{type:String, required:true},
-        password:String,
-        confirmPassword:String
+        firstName: { type: String, required: true },
+        lastName: { type: String, required: true },
+        dateOfBirth: { type: Date, required: true },
+        phoneNumber: { type: String, required: true },
+        country: { type: String, required: true },
+        position: { type: String, required: true },
+        email: { type: String, required: true },
+        password: { type: String, required: true },
+    },
+    {
+        timeseries: true
     }
 )
 module.exports = mongoose.model("users", User)

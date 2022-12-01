@@ -8,15 +8,18 @@ require("./DB/db")
 
 const app = express()
 const port = process.env.PORT || 8000
-// const usersRouter = require("./routes/users-routes")
+const usersRouter = require("./routes/users-routes")
 const productsRouter = require("./routes/products-routes")
+const countriesRouter = require("./routes/countries-routes")
 
 app.use(express.json({extended: true}))
 app.use(express.urlencoded({extended: true}))
 app.use(cors())
 
-// app.use("/users",usersRouter)
+app.use("/users",usersRouter)
 app.use("/products",productsRouter)
+app.use("/countries",countriesRouter)
+
 
 app.get("/", (req, res) => {
     res.send({message: "succses"})
