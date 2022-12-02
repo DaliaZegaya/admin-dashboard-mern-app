@@ -5,9 +5,12 @@ const Order = new Schema(
     {
         orderNumber: { type: Number, required: true },
         orderDate: { type: Date, required: true },
-        userDetails: { type: Object, required: true },
-        sum: { type: String, required: true },
-        itemsNumber: { type: Number, required: true }
+        userDetails: { type: mongoose.SchemaTypes.ObjectId, required:false },
+        itemsNumber: { type: Number, required: true },
+        orderAmountInUsd: { type: String, required: true },
+    },
+    {
+        timestamps: true
     }
 )
 module.exports = mongoose.model("orders", Order)

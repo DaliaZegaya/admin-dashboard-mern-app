@@ -13,7 +13,7 @@ const User = new Schema(
         password: { type: String, required: true },
     },
     {
-        timeseries: true
+        timestamps: true
     }
 )
 module.exports = mongoose.model("users", User)

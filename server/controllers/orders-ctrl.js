@@ -3,7 +3,7 @@ const ordersModel = require("../models/orders-model")
 const getAllOrders = async (req,res) => {
     await ordersModel.find({})
     .then((orders)=>{
-        orders.length == 0 ? res.status(300).json({success:false, message:"sport eqipment not found"}) :
+        orders.length == 0 ? res.status(300).json({success:false, message:"orders not found"}) :
         res.status(200).json({success:true,orders})
     })
     .catch(err=>{res.status(400).json({success:false,err})})

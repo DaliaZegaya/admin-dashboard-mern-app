@@ -8,9 +8,9 @@ const {
 } = require("../controllers/products-ctrl")
 
 router.get("/",getAllProducts)
-router.get("/getClothingById/:id",getProductsById)
-router.post("/createClothing",createNewProducts)
-router.put("/updateClothing/:id",updateProducts)
-router.delete("/deleteClothing/:id",deleteProducts)
+router.get("/getProductsById/:id",getProductsById)
+router.post("/createProducts",createNewProducts)
+router.put("/updateProducts/:id",updateProducts)
+router.delete("/deleteProducts/:id",deleteProducts)
 
 module.exports = router

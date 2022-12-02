@@ -11,7 +11,7 @@ const Purchases = new Schema(
         date: { type: Date, required:true }
     },
     {
-        timeseries: true
+        timestamps: true
     }
 
 )

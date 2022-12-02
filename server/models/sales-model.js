@@ -7,9 +7,8 @@ const Sale = new Schema(
       startDate: { type: Date, required: true },
       endDate: { type: Date, required: true },
       categories: { type: Object, required: true },
-      discountPercentage: { type: Number, required: true },
-      isOnline: { type: Boolean, required: true },
+      discountPercentage: { type: Number, required: true }
     },
-    { timeseries: true }
+    { timestamps: true }
   );
 module.exports = mongoose.model("sales", Sale)
