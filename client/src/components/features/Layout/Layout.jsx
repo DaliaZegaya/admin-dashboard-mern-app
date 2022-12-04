@@ -3,25 +3,48 @@ import React from "react";
 import BoxCard from "../Bar-chart/Bar-chart";
 import NavbarPage from "../Header/Header";
 import OrdersProvider from "../../../contexts/orders-context";
-import { PieChart } from "../Pie-chart/Pie-chart";
 import ProductsProvider from "../../../contexts/products-context";
-import BarChart from "../Bar-chart/Bar-chart"
-import ProductCard from "../Product-card/Product-card";
+import Sidebar from "../Sidebar/Sidebar";
+import Navbar from "../Navbar/Navbar";
+import Router from "../../../routes/Router";
 
 
-function Layout() {
+function Layout () {
   return (
     <div className="layout">
-      <NavbarPage />
-      <ProductsProvider>
-        <PieChart />
-        <ProductCard />
-      </ProductsProvider>
-      <OrdersProvider>
-        <BarChart />
-      </OrdersProvider>
-    </div>
-  );
-};
+      <div className="sidebar">
+        <Sidebar/>
+      </div>
 
+      <div className="nav">
+        <div className="navbar">
+          <Navbar/>
+        </div>
+
+        <div>
+          <Router/>
+        </div>
+
+      </div>
+    </div>
+  )
+}
 export default Layout;
+
+
+// function Layout() {
+//   return (
+//     <div className="layout">
+//       <NavbarPage />
+//       <ProductsProvider>
+//         <PieChart />
+//         <ProductCard />
+//       </ProductsProvider>
+//       <OrdersProvider>
+//         <BarChart />
+//       </OrdersProvider>
+//     </div>
+//   );
+// };
+
+// export default Layout;
