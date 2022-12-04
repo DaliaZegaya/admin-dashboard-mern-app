@@ -1,10 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import Layout from "./components/features/Layout/Layout";
 
 function App() {
   return (
     <div className="App">
-      jjj
+        <Layout />
     </div>
   );
 }

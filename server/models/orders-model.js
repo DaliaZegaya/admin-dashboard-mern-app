@@ -5,6 +5,7 @@ const Order = new Schema(
     {
         orderNumber: { type: Number, required: true },
         orderDate: { type: Date, required: true },
+        orderItems: [{ type: mongoose.SchemaTypes.ObjectId, required:false }], 
         userDetails: { type: mongoose.SchemaTypes.ObjectId, required:false },
         itemsNumber: { type: Number, required: true },
         orderAmountInUsd: { type: String, required: true },
