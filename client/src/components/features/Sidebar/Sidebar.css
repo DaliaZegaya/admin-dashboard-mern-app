@@ -1,11 +1,11 @@
-.container {
+/* .container {
     height: 100%;
     width: 17%;
     position: fixed;
     padding: 0.2rem 1rem;
     background-color: orange;
     color: #fff;
-}
+} */
 
 .logo {
     display: flex;

@@ -1,9 +1,15 @@
-
   .home-container {
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 80vw;
+    display: flex;
+}
+
+.squre{
+    display: flex;
+    width: 100%;
 }
 
 .box {
@@ -15,8 +21,8 @@
 .box-icon {
     position: absolute;
     height: 5rem;
-    width: 5rem;
-    margin-top: 2rem;
+    width:5rem;
+    margin-top: -3rem;
     margin-left: 1rem;
     border-radius: 50%;
 }
@@ -33,7 +39,7 @@
 
 .box-data {
     flex-direction: column;
-    height: 8rem;
+    height: 10rem;
     width: 100%;
     margin-top: 5rem;
     background-color: #fff;
@@ -86,8 +92,18 @@
     border-radius: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-
-/* media queries (medium device) */
+.cardLine{
+    height: 26rem;
+    width: 20vw;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
 
 @media screen and (max-width : 1024px ) {
     .home-container-2 {
@@ -100,10 +116,54 @@
     }
   }
   
-  /* media queries (small devices) */
   
   @media screen and (max-width : 600px ) {
     .box {
         width: 12rem;
     }
+  }
+
+
+
+.Squre {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+  }
+
+.section2{
+   align-items: center; 
+}
+
+  .Graph {
+      width: 100%;
+  }
+  .col-5 .chart canvas{
+    height: 45vh !important;
+  }
+  .VarticalBarChart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .Vartical{
+    width: 100%;
+  }
+  .TwoCircle{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-end;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .TwoCircle .col .chart canvas{
+    height: 24vh !important;
+  }
+
+  .section3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }

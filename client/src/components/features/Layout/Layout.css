@@ -1,4 +1,4 @@
-.layout {
+/* .layout {
     display: grid;
     grid-template-columns: 15% 80%;
     gap: 5rem;
@@ -16,7 +16,7 @@
     .layout {
       gap: 2rem;
     }
-  }
+  } */
   
   @media screen and (max-width : 600px) {
     .layout {

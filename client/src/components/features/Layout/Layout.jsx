@@ -11,21 +11,22 @@ import Router from "../../../routes/Router";
 
 function Layout () {
   return (
-    <div className="layout">
-      <div className="sidebar">
+    <div className="layout ">
+      {/* <div className="sidebar ">
         <Sidebar/>
-      </div>
+      </div> */}
 
-      <div className="nav">
+      {/* <div className="nav">
         <div className="navbar">
           <Navbar/>
         </div>
-
-        <div>
+      </div> */}
+      <div>
+      <Navbar/>
+      </div>
+      <div>
           <Router/>
         </div>
-
-      </div>
     </div>
   )
 }
