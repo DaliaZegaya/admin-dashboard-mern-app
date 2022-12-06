@@ -7,6 +7,6 @@ const {
 
 router.get("/",getAllCoutries)
 router.get("/getCountryById",getCountryById)
-router.post("/createCountry",createNewCountry)
+router.post("/createNewCountry",createNewCountry)
 
 module.exports = router

@@ -5,38 +5,37 @@ import Chart from "react-google-charts";
 import { countriesContext } from "../../../contexts/countries-context"
 import { useContext } from 'react';
 
-const data = [
-  ["Country", "Popularity"],
-  ["Germany", 200],
-  ["United States", 300],
-  ["Brazil", 400],
-  ["Canada", 500],
-  ["France", 600],
-  ["RU", 700],
-  ["Israel",1000]
-];
 
-function GeoChart() {
+export default function GeoChart() {
   const { countries, setCountries } = useContext(countriesContext)
-  console.log(countries);
 
-  // const data = countries.map((item)=>item.countryName);
-  const data = [
-    ["Country", "Popularity"],
-    ["Germany", 200],
-    ["United States", 300],
-    ["Brazil", 400],
-    ["Canada", 500],
-    ["France", 600],
-    ["RU", 700],
-    ["Israel",1000]
-  ];
+  const setup = ["Country", "Popularity"]
+  const population = [
+    { 0: 200 },
+    { 1: 300 },
+    { 2: 400 },
+    { 3: 500 },
+    { 4: 600 },
+    { 5: 700 },
+    { 6: 800 },
+    { 7: 900},
+    { 8: 1000}
+  ]
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "top",
+      },
+      title: {
+        display: true,
+        text: "Store Popularity by country",
+      },
+    },
+  };
+  const data = [[...setup], ...countries?.map((obj, i) => [obj = obj.countryName, population[i][i]])];
 
   return (
-    <div className="geo-chart">
-      <Chart chartType="GeoChart" width="35vw" height="50vh" data={data} />
-    </div>
-  );
+    <Chart chartType="GeoChart" options={options} data={data} />
+  )
 };
-
-export default GeoChart;
