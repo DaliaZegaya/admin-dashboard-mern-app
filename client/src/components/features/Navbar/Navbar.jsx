@@ -19,8 +19,8 @@ function Navbar () {
         <MDBContainer>
           <MDBNavbarBrand href='#'>
             <img
-              src='https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.webp'
-              height='30'
+              src='https://www.absolutdata.com/wp-content/uploads/2018/07/logo-1.png'
+              height='80'
               alt=''
               loading='lazy'
             />
