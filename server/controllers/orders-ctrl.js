@@ -2,7 +2,7 @@ const ordersModel = require("../models/orders-model")
 
 const getAllOrders = async (req,res) => {
     await ordersModel.find({})
-    .populate({path:"products"})
+    .populate("products")
     .then((orders)=>{
         orders.length == 0 ? res.status(300).json({success:false, message:"orders not found"}) :
         res.status(200).json({success:true,orders})

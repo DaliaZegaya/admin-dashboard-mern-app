@@ -66,7 +66,7 @@ const getAllUsers = async (req, res) => {
 // }
 
 const createNewUser = async (req,res) => {
-    await usersModel.insertMany(req.body.sales)
+    await usersModel.insertMany(req.body.users)
     .then(()=>{
         res.status(200).json({success:true, message:"user added successfully"})
     })
